@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite';
 import purgecss from '@fullhuman/postcss-purgecss';
 
-export default defineConfig({
-  base: './',
+export default defineConfig(
+  {
+  base: process.env.DEPLOY_BASE_URL ?? '/',
   css: {
     postcss: {
       plugins: [
